@@ -43,7 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
                       data-email="${participant}"
                       aria-label="Remove ${participant} from ${name}"
                     >
-                      ✕
+                      <span aria-hidden="true">✕</span>
+                      <span class="sr-only">Remove ${participant}</span>
                     </button>
                   </li>
                 `
