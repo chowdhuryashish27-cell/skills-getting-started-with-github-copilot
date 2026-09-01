@@ -97,8 +97,8 @@ section h3 {
   color: #2e7d32;
   border: 1px solid #b7e4c7;
   border-radius: 999px;
-  padding: 6px 10px;
-  font-size: 0.8rem;
+  padding: 8px 12px;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -145,19 +145,29 @@ section h3 {
 
 .delete-participant {
   appearance: none;
-  border: 1px solid #e2a4a4;
+  border: 1px solid #9d3d2a;
   background: #fff1f1;
-  color: #b42318;
+  color: #7d1a0f;
   border-radius: 999px;
   width: 28px;
   height: 28px;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.15s ease, background-color 0.15s ease;
+  transition: transform 0.15s ease, background-color 0.15s ease, outline 0.15s ease;
 }
 
 .delete-participant:hover {
+  background: #fee2e2;
+  transform: scale(1.04);
+}
+
+.delete-participant:focus-visible {
+  outline: 2px solid #1a237e;
+  outline-offset: 2px;
+}
+
+.delete-participant:hover:focus-visible {
   background: #fee2e2;
   transform: scale(1.04);
 }
@@ -189,11 +199,17 @@ button {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, outline 0.15s ease;
 }
 
 button:hover {
   background-color: #3949ab;
+}
+
+button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 3px #1a237e;
 }
 
 .message {
@@ -222,6 +238,18 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 footer {
